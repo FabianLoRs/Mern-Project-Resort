@@ -1,0 +1,42 @@
+{
+	"compilerOptions": {
+		"target": "ES2015",
+		"module": "CommonJS",
+		"lib": ["DOM", "ES2015"],
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"moduleResolution": "node",
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
+		"noImplicitAny": true,
+		"sourceMap": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"pretty": true,
+		"strict": true,
+		"baseUrl": "./",
+		"outDir": "./build",
+		"plugins": [
+			{ "transform": "typescript-transform-paths" },
+			{
+				"transform": "typescript-transform-paths",
+				"afterDeclarations": true
+			}
+		],
+		"paths": {
+			"@bootstrap/*": ["src/bootstrap/*"],
+			"@configs/*": ["src/configs/*"],
+			"@auth/*": ["src/features/auth/*"],
+			"@reservation/*": ["src/features/reservation/*"],
+			"@interfaces/*": ["src/interfaces/*"],
+			"@decorators/*": ["src/shared/globals/decorators/*"],
+			"@helpers/*": ["src/shared/globals/helpers/*"],
+			"@services/*": ["src/shared/globals/services/*"],
+			"@root/*": ["src/*"]
+		}
+	},
+	"exclude": ["node_module"],
+	"include": ["src/**/*.ts"]
+}

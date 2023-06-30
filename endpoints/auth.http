@@ -1,0 +1,67 @@
+@baseUrl = http://localhost:5000
+@urlPath = api/v1
+
+###
+POST {{baseUrl}}/{{urlPath}}/signup
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+	"name": "Pepe",
+	"lastname": "Luna",
+	"email": "pepe@gmail.com",
+	"phoneNumber": "955566889",
+	"password": "123456"
+}
+
+###
+POST {{baseUrl}}/{{urlPath}}/signin
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+	"email": "fab@gmail.com",
+	"password": "123456"
+}
+
+###
+GET {{baseUrl}}/{{urlPath}}/signout
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+POST {{baseUrl}}/{{urlPath}}/makeReservation
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+	"nights": "5",
+	"beds": "2",
+	"category": "NORMAL"
+}
+
+###
+GET {{baseUrl}}/{{urlPath}}/myReservation/649e248edfd3eff905909df3
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+###
+PUT {{baseUrl}}/{{urlPath}}/editReservation/649e248edfd3eff905909df3
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+	"nights": "3"
+}
+
+###
+DELETE {{baseUrl}}/{{urlPath}}/deleteReservation/649e248edfd3eff905909df3
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
